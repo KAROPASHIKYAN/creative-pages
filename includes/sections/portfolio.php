@@ -1,4 +1,4 @@
-<div id="portfolio">
+<div id="<?php the_sub_field('section_name'); ?>">
     <div class="container-fluid p-0">
         <div class="row no-gutters">
             <?php $rows = get_sub_field('rows'); ?>
