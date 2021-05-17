@@ -20,8 +20,8 @@ sections('call_to_action');
 endwhile;
 endif;
 ?>
+<?php
+$sections = get_field('sections');
 
+?>
 <?php get_footer() ;?>
-
-
-
