@@ -3,8 +3,8 @@
 
 while (have_rows('sections')): the_row();
 
-if (get_row_layout() == 'top') {
-sections('top');
+if (get_row_layout() == 'masthead') {
+sections('masthead');
 } elseif (get_row_layout() == 'about') {
 sections('about');
 } elseif (get_row_layout() == 'contact') {
