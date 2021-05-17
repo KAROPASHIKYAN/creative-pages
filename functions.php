@@ -49,3 +49,9 @@ function b($a)
     print_r($a);
     echo "</pre>";
 }
+function register($str)
+{
+    $str = strtolower($str);
+    $str = str_replace(' ', '_', $str);
+    return ($str);
+}
