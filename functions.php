@@ -19,7 +19,7 @@ add_action( 'wp_enqueue_scripts', function () {
     wp_enqueue_script('anime', 'https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js', array(), null, true);
 
     wp_enqueue_script('magnific-popup', 'https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js', array(), null, true);
-    
+
     wp_enqueue_script('main', get_stylesheet_directory_uri() . '/js/scripts.js', array(), null, true);
 
 });
@@ -28,3 +28,18 @@ add_action('after_setup_theme', function () {
     add_theme_support('title-tag');
 
 });
+function sections( $name, $args = [] )
+{
+    try {
+        if ($name == "") {
+            throw new Exception("View name empty.");
+        }
+
+
+        $file_name = "/includes/sections/{$name}";
+
+        get_template_part($file_name, '', $args);
+    } catch (Exception $e) {
+        echo "Error: " . $e->getMessage();
+    }
+}
