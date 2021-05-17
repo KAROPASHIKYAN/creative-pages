@@ -2,12 +2,8 @@
     <div class="container">
         <div class="small text-center text-muted">
             Copyright &copy;
-            <!-- This script automatically adds the current year to your website footer-->
-            <!-- (credit: https://updateyourfooter.com/)-->
-            <script>
-                document.write(new Date().getFullYear());
-            </script>
-            - Company Name
+            <?= date('Y');?>
+            - <?= the_field('company_name') ;?>
         </div>
     </div>
 </footer>
