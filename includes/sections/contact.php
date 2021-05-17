@@ -1,3 +1,7 @@
+<?php
+$phone = get_sub_field('phone_number');
+$email = get_sub_field('email');
+?>
 <section class="page-section" id="<?php the_sub_field('section_name'); ?>">
     <div class="container">
         <div class="row justify-content-center">
@@ -10,12 +14,15 @@
         <div class="row">
             <div class="col-lg-4 ml-auto text-center mb-5 mb-lg-0">
                 <i class="fas fa-phone fa-3x mb-3 text-muted"></i>
-                <div><?php the_sub_field('phone_number'); ?></div>
+                <?php if (!empty($phone)):?>
+                    <div><?= $phone; ?></div>
+                <?php endif; ?>
             </div>
             <div class="col-lg-4 mr-auto text-center">
                 <i class="fas fa-envelope fa-3x mb-3 text-muted"></i>
-                <!-- Make sure to change the email address in BOTH the anchor text and the link target below!-->
-                <a class="d-block" href="mailto:<?php the_sub_field('email'); ?>"><?php the_sub_field('email'); ?></a>
+                <?php if (!empty($email)): ?>
+                    <a class="d-block" href="mailto:<?= $email; ?>"><?= $email; ?></a>
+                <?php endif; ?>
             </div>
         </div>
     </div>
