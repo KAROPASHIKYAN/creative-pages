@@ -1,3 +1,4 @@
+<?php $button = get_sub_field('button')?>
 <header class="masthead">
     <div class="container h-100">
         <div class="row h-100 align-items-center justify-content-center text-center">
@@ -7,7 +8,7 @@
             </div>
             <div class="col-lg-8 align-self-baseline">
                 <p class="text-white-75 font-weight-light mb-5"><?php the_sub_field('content'); ?></p>
-                <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about"><?php the_sub_field('button_name'); ?></a>
+                <a class="btn btn-primary btn-xl js-scroll-trigger" href="<?= register($button['url']) ;?>"><?= $button['title'] ;?></a>
             </div>
         </div>
     </div>
