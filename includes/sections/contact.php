@@ -1,8 +1,9 @@
 <?php
 $phone = get_sub_field('phone_number');
 $email = get_sub_field('email');
+$id = get_sub_field('section_name');
 ?>
-<section class="page-section" id="<?php the_sub_field('section_name'); ?>">
+<section class="page-section" id="<?= register($id); ?>">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-8 text-center">
