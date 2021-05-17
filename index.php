@@ -3,37 +3,25 @@
 
 while (have_rows('sections')): the_row();
 
-if (get_row_layout() == 'hero') {
-sections('hero');
+if (get_row_layout() == 'top') {
+sections('top');
 } elseif (get_row_layout() == 'about') {
 sections('about');
 } elseif (get_row_layout() == 'contact') {
 sections('contact');
-} elseif (get_row_layout() == 'features') {
-sections('features');
-} elseif (get_row_layout() == 'pricing') {
-sections('pricing');
-} elseif (get_row_layout() == 'team') {
-sections('team');
-} elseif (get_row_layout() == 'testimonials') {
-sections('testimonials');
-
+} elseif (get_row_layout() == 'portfolio') {
+sections('portfolio');
+} elseif (get_row_layout() == 'services') {
+sections('services');
+} elseif (get_row_layout() == 'call_to_action') {
+sections('call_to_action');
 }
 
 endwhile;
 endif;
 ?>
-        <!-- About-->
 
-        <!-- Services-->
+<?php get_footer() ;?>
 
-        <!-- Portfolio-->
 
-        <!-- Call to action-->
-
-        <!-- Contact-->
-
-        <!-- Footer-->
-        <?php get_footer() ;?>
-        <!-- Bootstrap core JS-->
 
