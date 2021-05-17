@@ -1,4 +1,5 @@
-<section class="page-section" id="<?php the_sub_field('section_name');?>">
+<?php $id = get_sub_field('section_name'); ?>
+<section class="page-section" id="<?= register($id);?>">
     <div class="container">
         <h2 class="text-center mt-0"><?php the_sub_field('title'); ?></h2>
         <hr class="divider my-4" />
