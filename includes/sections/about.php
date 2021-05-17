@@ -1,4 +1,3 @@
-<?php $about = get_sub_field ('about'); ?>
 <section class="page-section bg-primary" id="<?php the_sub_field('section_name');?>">
     <div class="container">
         <div class="row justify-content-center">
